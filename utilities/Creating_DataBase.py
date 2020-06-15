@@ -70,17 +70,13 @@ with open('/home/hardproxy/Documents/TCC-BD_ML/ML-ThermoElec/Data/Materials_Data
     
     class_crystal={'tetragonal':0,'trigonal':1,'orthorhombic':2,'cubic':3,'monoclinic':4
                   ,'triclinic':5,'hexagonal': 6}
-        
     
-    for i in range(1226,len(list_id)) :    
-        #Acesso ao servidor MP pela USER-KEY  
-        
-        
-        with MPRester("AzDkMZ4uNfGQbovDDB79") as m:
-            
+    #Acesso ao servidor MP pela USER-KEY  
+    with MPRester("AzDkMZ4uNfGQbovDDB79") as m:        
+        for i in range(28651,len(list_id)) : 
             # Caso houver algum tipo de erro durant
-            try : 
-                       
+            try:  
+                     
                 structure = m.get_data(list_ident[i],data_type = 'vasp', prop = 'structure')
                 if len(structure) == 0  :             
                     structure = m.get_data(list_form[i],data_type = 'vasp', prop = 'structure')
@@ -212,4 +208,4 @@ with open('/home/hardproxy/Documents/TCC-BD_ML/ML-ThermoElec/Data/Materials_Data
             except (IndexError,MPRestError,AttributeError):
                 pass
         
-        print('Material processado : ' + str(i) + '\n')
+            print('Material processado : ' + str(i) + '\n')
