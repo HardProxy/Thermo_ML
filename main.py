@@ -42,7 +42,7 @@ import csv                                            # Módulo de acesso a arqu
 
 #from mpcontribs.client import load_client             # Módulo de acesso a uma seção no MPContribs server
 #from pymatgen.ext.matproj import MPRester             # Módulo de acesso ao MP server
-#from pymatgen import Structure                        # Acesso á classe do tipo Structure
+#from pymatgen import Structure                        # Acesso á classe do tipo Structure    
 
 print('Acessando Banco de Dados de Materiais ... :) \n')
 
@@ -108,63 +108,66 @@ with open('/home/hardproxy/Documents/TCC-BD_ML/ML-ThermoElec/Data/Materials_Data
     
     num_linhas =  0
     for row in csv_reader:
-        list_id.append(row['id'])
-        list_ident.append(row['identifier'])
-        list_form.append(row['formula'])
-        list_temp.append(row['temperature'])
-        list_efermi.append(row['efermi'])
-        list_e_per_atom.append(row['e_per_atom'])
-        list_ele_cell.append(row['ele_cell'])
-        list_med_mass.append(row['med_mass'])
-        list_var_mass.append(row['var_mass'])
-        list_med_raio.append(row['med_raio'])
-        list_var_raio.append(row['var_raio'])
-        list_med_ele.append(row['med_ele'])
-        list_var_ele.append(row['var_ele'])
-        list_med_val.append(row['med_val'])
-        list_var_val.append(row['var_val'])
-        list_g1.append(row['g1'])
-        list_g2.append(row['g2'])
-        list_g3.append(row['g3'])
-        list_g4.append(row['g4'])
-        list_g5.append(row['g5'])
-        list_g6.append(row['g6'])
-        list_g7.append(row['g7'])
-        list_g8.append(row['g8'])
-        list_g9.append(row['g9'])
-        list_g10.append(row['g10'])
-        list_g11.append(row['g11'])
-        list_g12.append(row['g12'])
-        list_g13.append(row['g13'])
-        list_g14.append(row['g14'])
-        list_g15.append(row['g15'])
-        list_g16.append(row['g16'])
-        list_g17.append(row['g17'])
-        list_g18.append(row['g18'])
-        list_p1.append(row['p1'])
-        list_p2.append(row['p2'])
-        list_p3.append(row['p3'])
-        list_p4.append(row['p4'])
-        list_p5.append(row['p5'])
-        list_p6.append(row['p6'])
-        list_p7.append(row['p7'])
-        list_e_l1.append(row['e_l1'])
-        list_e_l2.append(row['e_l2'])
-        list_e_l3.append(row['e_l3'])
-        list_e_l4.append(row['e_l4'])
-        list_e_l5.append(row['e_l5'])
-        list_e_l6.append(row['e_l6'])
-        list_e_l7.append(row['e_l7'])
-        list_tetragonal.append(row['tetragonal'])
-        list_trigonal.append(row['trigonal'])
-        list_orthorhombic.append(row['orthorhombic'])
-        list_cubic.append(row['cubic'])
-        list_monoclinic.append(row['monoclinic'])
-        list_triclinic.append(row['triclinic'])
-        list_hexagonal.append(row['hexagonal'])
-        list_s.append(row['⟨S²σ⟩'])
-        list_kappa.append(row['κₑᵉ'])
-        num_linhas+=1
+        if row['κₑᵉ'] == '0.0':
+            pass
+        else :
+            list_id.append(row['id'])
+            list_ident.append(row['identifier'])
+            list_form.append(row['formula'])
+            list_temp.append(row['temperature'])
+            list_efermi.append(row['efermi'])
+            list_e_per_atom.append(row['e_per_atom'])
+            list_ele_cell.append(row['ele_cell'])
+            list_med_mass.append(row['med_mass'])
+            list_var_mass.append(row['var_mass'])
+            list_med_raio.append(row['med_raio'])
+            list_var_raio.append(row['var_raio'])
+            list_med_ele.append(row['med_ele'])
+            list_var_ele.append(row['var_ele'])
+            list_med_val.append(row['med_val'])
+            list_var_val.append(row['var_val'])
+            list_g1.append(row['g1'])
+            list_g2.append(row['g2'])
+            list_g3.append(row['g3'])
+            list_g4.append(row['g4'])
+            list_g5.append(row['g5'])
+            list_g6.append(row['g6'])
+            list_g7.append(row['g7'])
+            list_g8.append(row['g8'])
+            list_g9.append(row['g9'])
+            list_g10.append(row['g10'])
+            list_g11.append(row['g11'])
+            list_g12.append(row['g12'])
+            list_g13.append(row['g13'])
+            list_g14.append(row['g14'])
+            list_g15.append(row['g15'])
+            list_g16.append(row['g16'])
+            list_g17.append(row['g17'])
+            list_g18.append(row['g18'])
+            list_p1.append(row['p1'])
+            list_p2.append(row['p2'])
+            list_p3.append(row['p3'])
+            list_p4.append(row['p4'])
+            list_p5.append(row['p5'])
+            list_p6.append(row['p6'])
+            list_p7.append(row['p7'])
+            list_e_l1.append(row['e_l1'])
+            list_e_l2.append(row['e_l2'])
+            list_e_l3.append(row['e_l3'])
+            list_e_l4.append(row['e_l4'])
+            list_e_l5.append(row['e_l5'])
+            list_e_l6.append(row['e_l6'])
+            list_e_l7.append(row['e_l7'])
+            list_tetragonal.append(row['tetragonal'])
+            list_trigonal.append(row['trigonal'])
+            list_orthorhombic.append(row['orthorhombic'])
+            list_cubic.append(row['cubic'])
+            list_monoclinic.append(row['monoclinic'])
+            list_triclinic.append(row['triclinic'])
+            list_hexagonal.append(row['hexagonal'])
+            list_s.append(row['⟨S²σ⟩'])
+            list_kappa.append(row['κₑᵉ'])
+            num_linhas+=1
 csv_file.close()
 
 
@@ -647,8 +650,8 @@ kappa_array = np.array(kappa)
                   '⟨S²σ⟩','κₑᵉ']
 
 '''
-pot_quim = int(input("Escolha como maneira de caracterização de Potencial Químico \n1) Energia de Fermi \n2) Energia por Átomo \n "))
-
+#pot_quim = int(input("Escolha como maneira de caracterização de Potencial Químico \n1) Energia de Fermi \n2) Energia por Átomo \n "))
+pot_quim = 1
 if pot_quim == 1 :
     # Junção de Parâmetros com potencial quimico igual à energia de fermi
     X = np.c_[temp_array,efermi_array,ele_cell_array,med_mass_array,var_mass_array,med_raio_array,var_raio_array,
@@ -667,7 +670,10 @@ else :
               e_l1_array,e_l2_array,e_l3_array,e_l4_array,e_l5_array,e_l6_array,e_l7_array,tetragonal_array,
               trigonal_array,orthorhombic_array,cubic_array,monoclinic_array,triclinic_array,hexagonal_array]
 
-y = np.c_[s_array,kappa_array]
+#y = np.c_[s_array,kappa_array]
+
+        
+y = s_array/kappa_array
 
 # Splitting data ( Train vs Test )
 X_train, X_test, y_train, y_test = train_test_split(X, y)
@@ -679,7 +685,7 @@ X_train = scaler.transform(X_train)
 X_test =  scaler.transform(X_test)
 
 # Creating object of Neural Network
-ANN  = MLPRegressor(hidden_layer_sizes=(43,20,20,15,10,5),tol=1e-6, max_iter=10000, random_state=0,verbose=True)
+ANN  = MLPRegressor(hidden_layer_sizes=(43,20,20,15,10,5),learning_rate='adaptive',tol=1e-6, max_iter=10000,random_state=0,verbose=True)
 
 # Training data
 ANN.fit(X_train,y_train)
