@@ -670,9 +670,10 @@ else :
               e_l1_array,e_l2_array,e_l3_array,e_l4_array,e_l5_array,e_l6_array,e_l7_array,tetragonal_array,
               trigonal_array,orthorhombic_array,cubic_array,monoclinic_array,triclinic_array,hexagonal_array]
 
+# Otimização dos dois Parametros
 #y = np.c_[s_array,kappa_array]
 
-        
+# Calculo da Figura de Mérito
 y = s_array/kappa_array
 
 # Splitting data ( Train vs Test )
